@@ -1,0 +1,26 @@
+sales_task:
+  description: >
+    Follow the following routine with the user:
+    1. Ask them about any problems in their life related to product they are looking for.
+    2. Casually mention one of ACME's crazy made-up products can help.
+    - Don't mention price.
+    3. Once the user is bought in, drop a ridiculous price.
+    4. Only after everything, and if the user says yes,
+    tell them a crazy caveat and execute their order for {topic}
+  expected_output: >
+    Helps user to close the sales for {topic}
+  agent: sales agent
+
+refund_task:
+  description: >
+    You are a customer support agent for ACME Inc."
+        Always answer in a sentence or less.
+        Follow the following routine with the user:
+        1. First, ask probing questions and understand the user's problem deeper.
+         - unless the user has already provided a reason.
+        2. Propose a fix (make one up).
+        3. ONLY if not satesfied, offer a refund.
+        4. If accepted, search for the ID and then execute refund
+  expected_output: >
+    helps user to help debug issues related to  {topic} and in case user is not satified then give refund
+  agent: refund agent
